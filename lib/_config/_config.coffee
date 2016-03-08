@@ -4,7 +4,7 @@
 @Config =
 
 	# Basic Details
-	name: 'My App'
+	name: 'CC-newtab'
 	title: ->
 			TAPi18n.__ 'configTitle'
 	subtitle: ->
@@ -32,9 +32,9 @@
 
 	# For email footers
 	legal:
-		address: 'Jessnerstrasse 18, 12047 Berlin'
-		name: 'Meteor Factory'
-		url: 'http://benjaminpeterjones.com'
+		address: 'Hackerati, 395 Hudson, New York'
+		name: 'Vivian Keating'
+		url: 'http://www.thehackerati.com'
 
 	about: 'http://meteorfactory.io'
 	blog: 'http://learn.meteorfactory.io'
