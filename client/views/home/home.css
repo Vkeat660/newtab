@@ -1,0 +1,134 @@
+@font-face {
+  font-family: BrandonText-BoldItalic;
+  src: url("/BrandonText-BoldItalic") format("opentype");
+}
+
+@font-face {
+  font-family: BrandonText-BlackItalic;
+  src: url("/BrandonText-BlackItalic") format("opentype");
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+  background: white;
+}
+
+#title {
+  position: absolute;
+  color: black;
+  font-family: 'BrandonText-BlackItalic', Fallback, sans-serif;
+  font-size: 118px;
+  letter-spacing: -3px;
+
+  left: 0;
+  line-height: 200px;
+  margin-top: -100px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+
+}
+
+#footer {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  top:90%;
+  bottom: 100%;
+  width: 100%;
+
+}
+
+#footer-line-1 {
+  color: black;
+  font-family: 'BrandonText-BoldItalic', Fallback, sans-serif;
+  font-size: 32px;
+  letter-spacing: 0px;
+
+  line-height: 32px;
+  margin-top: -16px;
+}
+
+#footer-line-2 {
+  color: black;
+  font-family: 'BrandonText-BoldItalic', Fallback, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 16px;
+  margin-top: -8px;
+}
+
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+div.overlay {
+
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+
+  /* Overlay: */
+  background: rgba(235,76,143,0.80);
+
+}
+
+#logo {
+  position: absolute;
+  left: 13.75%;
+  width: 74.375%;
+  right: 11.875%;
+  top: 0%;
+  height: 80px;
+
+}
+
+@media screen and (max-height: 1024px) {
+
+  #logo {
+    position: absolute;
+    left: 13.75%;
+    width: 74.375%;
+    right: 11.875%;
+    top: 0%;
+    height: 8%px;
+  }
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+
+  div.overlay {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}

@@ -2,6 +2,12 @@ Router.map ->
   @route "home",
     path: "/"
     layoutTemplate: "homeLayout"
+    waitOn: ->
+      [
+        subs.subscribe 'posts'
+      ]
+    data: ->
+      posts: Posts.find({},{sort: {createdAt: -1}}).fetch()
 
   @route "dashboard",
     path: "/dashboard"

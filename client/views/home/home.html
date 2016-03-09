@@ -1,3 +1,4 @@
+
 <template name="home">
     <!--nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -20,20 +21,22 @@
             </div>
         </div>
     </nav-->
+
+
     <section id="intro" class="colored text-center">
         <div class="container">
-            <div class="intro-well wow animated bounceIn">
-                <div class="row">
-                    <div class="col-lg-12 col-sm-12">
-                        <h1>{{Config.title}}</h1>
-                        <h2 class="hidden-xs">{{Config.subtitle}}</h2>
-                        {{#if User}}
-                        <a href="{{pathFor 'dashboard'}}" class="btn btn-success"><i class="fa fa-dashboard"></i> {{_ "dashboard"}}</a>
-                        {{else}}
-                        <a class="btn btn-hollow" href="{{pathFor 'atSignUp'}}">{{_ "getstarted"}}</a>
-                        {{/if}}
-                    </div>
-                </div>
+            <div class="intro-well wow animated fadeIn">
+                    <!--img src="http://garolyogurt.com.s3-website-us-east-1.amazonaws.com/images/cc-2.jpg" className="bg"-->
+                    <p id="title">#BINGOBRONSON</p>
+                    <!--{{> posts}}-->
+                    <div id="footer">
+                      <p id="footer-line-1">
+                        BROAD CITY
+                      </p>
+                      <p id="footer-line-2">
+                        NEW EPISODES WEDNESDAYS 10/9c
+                      </p>
+                   </div>
             </div>
         </div>
     </section>
