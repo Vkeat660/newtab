@@ -8,8 +8,11 @@ Router.map ->
         subs.subscribe 'attachments'
       ]
     data: ->
-      posts: Posts.find({},{sort: {createdAt: -1}}).fetch()
+      query = Posts.find({}).fetch()
+      randomIndex = Math.floor( Math.random() * query.length );
+      posts: [query[randomIndex]]
 
+   
   @route "dashboard",
     path: "/dashboard"
     waitOn: ->
@@ -20,3 +23,6 @@ Router.map ->
       ]
     data: ->
       posts: Posts.find({},{sort: {createdAt: -1}}).fetch()
+
+
+
