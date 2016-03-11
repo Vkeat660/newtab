@@ -22,9 +22,11 @@
 				</div>
 				<div class="panel-body">
 					{{#autoForm id="add" collection="Posts" type="insert"}}
-					{{> afQuickField name="title"}}
-					{{> afQuickField name="content"}}
+					{{> afQuickField name="header"}}
+					{{> afQuickField name="footerLine1"}}
+          {{> afQuickField name="footerLine2"}}
 					{{> afQuickField name="picture"}}
+          {{> afQuickField name="overlayColor"}}
 					<button type="submit" class="btn btn-primary">{{_ "add_post_btn"}}</button>
 					{{/autoForm}}
 				</div>
@@ -45,21 +47,20 @@
 <template name="post">
 	<div class="template-post">
 
-
         {{#with getDoc picture 'Attachments'}}
               <img src="{{url}}" class="bg">
         {{/with}}
 
-
+        <div className="overlay"></div>
         <img src="/img/logo.svg" id="logo"/>
-				<p id="title">{{title}}</p>
+				<p id="title">{{header}}</p>
 						
         <div id="footer">
             <p id="footer-line-1">
-              {{content}}
+              {{footerLine1}}
             </p>
             <p id="footer-line-2">
-              NEW EPISODES WEDNESDAYS 10/9c
+              {{footerLine2}}
             </p>
         </div>
            

@@ -1,14 +1,17 @@
 @Posts = new Meteor.Collection('posts');
 
 Schemas.Posts = new SimpleSchema
-	title:
+	header:
 		type:String
 		max: 60
 
-	content:
+	footerLine1:
 		type: String
-		autoform:
-			rows: 5
+		max: 60
+
+	footerLine2:
+		type: String
+		max: 60
 
 	createdAt:
 		type: Date
@@ -29,6 +32,11 @@ Schemas.Posts = new SimpleSchema
 			afFieldInput:
 				type: 'fileUpload'
 				collection: 'Attachments'
+
+	overlayColor:
+		type: String
+		autoform:
+			type: 'bootstrap-colorpicker'
 
 	owner:
 		type: String

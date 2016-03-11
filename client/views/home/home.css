@@ -87,7 +87,7 @@ div.overlay {
   
   /* Set up proportionate scaling */
   width: 100%;
-  height: auto;
+  height: 100%;
   
   /* Set up positioning */
   position: absolute;
