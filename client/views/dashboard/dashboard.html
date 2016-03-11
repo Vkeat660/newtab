@@ -44,6 +44,14 @@
 
 <template name="post">
 	<div class="template-post">
+
+
+        {{#with getDoc picture 'Attachments'}}
+              <img src="{{url}}" class="bg">
+        {{/with}}
+
+
+        <img src="/img/logo.svg" id="logo"/>
 				<p id="title">{{title}}</p>
 						
         <div id="footer">
@@ -54,9 +62,6 @@
               NEW EPISODES WEDNESDAYS 10/9c
             </p>
         </div>
-        {{#with getDoc picture 'Attachments'}}
-              <img src="{{url}}">
-        {{/with}}
            
 	</div>
 </template>

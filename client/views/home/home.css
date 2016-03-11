@@ -17,7 +17,7 @@
 
 #title {
   position: absolute;
-  color: black;
+  color: white;
   font-family: 'BrandonText-BlackItalic', Fallback, sans-serif;
   font-size: 118px;
   letter-spacing: -3px;
@@ -43,7 +43,7 @@
 }
 
 #footer-line-1 {
-  color: black;
+  color: white;
   font-family: 'BrandonText-BoldItalic', Fallback, sans-serif;
   font-size: 32px;
   letter-spacing: 0px;
@@ -53,7 +53,7 @@
 }
 
 #footer-line-2 {
-  color: black;
+  color: white;
   font-family: 'BrandonText-BoldItalic', Fallback, sans-serif;
   font-size: 14px;
   letter-spacing: 0px;
@@ -73,6 +73,7 @@ img.bg {
   
   /* Set up positioning */
   position: absolute;
+  vertical-align:initial
   top: 0;
   left: 0;
 
