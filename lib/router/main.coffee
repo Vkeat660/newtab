@@ -5,6 +5,7 @@ Router.map ->
     waitOn: ->
       [
         subs.subscribe 'posts'
+        subs.subscribe 'attachments'
       ]
     data: ->
       posts: Posts.find({},{sort: {createdAt: -1}}).fetch()
