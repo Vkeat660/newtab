@@ -35,23 +35,20 @@
 </template>
 
 <template name="posts">
-	<div class="template-posts">
 		{{#each  posts}}
 		{{> post}}
 		{{else}}
 		{{> noData}}
 		{{/each}}
-	</div>
 </template>
 
 <template name="post">
-	<div class="template-post">
 
         {{#with getDoc picture 'Attachments'}}
               <img src="{{url}}" class="bg">
         {{/with}}
 
-        <div className="overlay"></div>
+        <div class="overlay"></div>
         <img src="/img/logo.svg" id="logo"/>
 				<p id="title">{{header}}</p>
 						
@@ -63,8 +60,6 @@
               {{footerLine2}}
             </p>
         </div>
-           
-	</div>
 </template>
 
 <template name="favoritesSidebar">
