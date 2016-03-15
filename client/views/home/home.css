@@ -101,7 +101,9 @@ div.overlay {
   left: 0;
 
   /* Overlay: */
-  background: rgba(235,76,143,0.80);
+  
+  opacity: 0.8; 
+  background: rgba(235,76,143,1.00);
 
 }
 
