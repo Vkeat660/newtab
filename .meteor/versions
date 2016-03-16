@@ -62,6 +62,7 @@ email@1.0.8
 fastclick@1.0.7
 favorites@0.0.4
 fortawesome:fontawesome@4.5.0
+fourseven:scss@3.4.1
 geojson-utils@1.0.4
 handlebars@1.0.4
 hot-code-push@1.0.0

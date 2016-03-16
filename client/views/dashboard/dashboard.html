@@ -45,11 +45,14 @@
 <template name="post">
 
         {{#with getDoc picture 'Attachments'}}
-              <img src="{{url}}" class="bg">
+              <img src="{{url}}" class="bg {{#if overrideFilters}}{{else}}desaturate{{/if}}">
         {{/with}}
 
-        <div class="overlay" background="{{overlayColor}}cc"></div>
-        
+        {{#if overrideFilters}}
+        {{else}}
+        <div class="overlay" style="background: rgba({{colorAsRGB}},.80)"></div>
+        {{/if}}
+
         <img src="/img/logo.svg" id="logo"/>
 				<p id="title">{{header}}</p>
 						

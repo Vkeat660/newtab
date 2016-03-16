@@ -75,9 +75,11 @@ img.bg {
   position: fixed;
   top: 0;
   left: 0;
+
 }
 
 img.desaturate {
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 
@@ -101,9 +103,9 @@ div.overlay {
   left: 0;
 
   /* Overlay: */
-  
-  opacity: 0.8; 
-  background: rgba(235,76,143,1.00);
+
+  /* opacity: 0.8; */
+  /* background: rgba(235,76,143,1.00);*/
 
 }
 

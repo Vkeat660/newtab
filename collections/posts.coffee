@@ -38,6 +38,13 @@ Schemas.Posts = new SimpleSchema
 		autoform:
 			type: 'bootstrap-colorpicker'
 
+	overrideFilters:
+		type: String
+		optional: true
+		autoform:
+			adFieldInput:
+				type: 'boolean-checkbox'
+
 	owner:
 		type: String
 		regEx: SimpleSchema.RegEx.Id
@@ -49,6 +56,7 @@ Schemas.Posts = new SimpleSchema
 				_.map Meteor.users.find().fetch(), (user)->
 					label: user.emails[0].address
 					value: user._id
+
 
 Posts.attachSchema(Schemas.Posts)
 
