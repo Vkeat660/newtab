@@ -3,7 +3,7 @@
 Schemas.Posts = new SimpleSchema
 	header:
 		type:String
-		max: 60
+		max: 20
 
 	footerLine1:
 		type: String
@@ -39,10 +39,9 @@ Schemas.Posts = new SimpleSchema
 			type: 'bootstrap-colorpicker'
 
 	overrideFilters:
-		type: String
-		optional: true
+		type: Boolean
 		autoform:
-			adFieldInput:
+			afFieldInput:
 				type: 'boolean-checkbox'
 
 	owner:
@@ -56,7 +55,6 @@ Schemas.Posts = new SimpleSchema
 				_.map Meteor.users.find().fetch(), (user)->
 					label: user.emails[0].address
 					value: user._id
-
 
 Posts.attachSchema(Schemas.Posts)
 

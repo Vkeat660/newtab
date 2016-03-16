@@ -27,6 +27,7 @@
           {{> afQuickField name="footerLine2"}}
 					{{> afQuickField name="picture"}}
           {{> afQuickField name="overlayColor"}}
+          {{> afQuickField name="overrideFilters"}}
 					<button type="submit" class="btn btn-primary">{{_ "add_post_btn"}}</button>
 					{{/autoForm}}
 				</div>
@@ -44,9 +45,12 @@
 
 <template name="post">
 
-        {{#with getDoc picture 'Attachments'}}
-              <img src="{{url}}" class="bg {{#if overrideFilters}}{{else}}desaturate{{/if}}">
-        {{/with}}
+        {{#if overrideFilters}}
+            <img src="{{#with getDoc picture 'Attachments'}}{{url}}{{/with}}" class="bg">
+        {{else}}
+            <img src="{{#with getDoc picture 'Attachments'}}{{url}}{{/with}}" class="bg desaturate">
+        {{/if}}
+        
 
         {{#if overrideFilters}}
         {{else}}
