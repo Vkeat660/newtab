@@ -44,7 +44,7 @@
 </template>
 
 <template name="post">
-
+    <div class="wow fadeIn animated">
         {{#if overrideFilters}}
             <img src="{{#with getDoc picture 'Attachments'}}{{url}}{{/with}}" class="bg">
         {{else}}
@@ -68,6 +68,7 @@
               {{footerLine2}}
             </p>
         </div>
+      </div>
 </template>
 
 <template name="favoritesSidebar">
